@@ -70,7 +70,7 @@ class SortTable extends Component {
         const { headerList } = this.props; 
         const tableContent = this.state.currTableContent;
         return (
-            <table className="table-border">
+            <table className="table-border" style={{margin: "0 auto"}}>
                 <thead>
                     <tr>
                         {

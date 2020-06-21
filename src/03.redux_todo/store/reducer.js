@@ -1,4 +1,9 @@
-import { INPUTING_TODO, ADD_TODO, DELETE_TODO_ITEM, INIT_AJAX_LIST } from './actionTypes.js';
+import {
+    INPUTING_TODO,
+    ADD_TODO,
+    DELETE_TODO_ITEM,
+    INIT_AJAX_LIST,
+} from './actionTypes.js';
 
 const initState = {
     inputTodo: '',
@@ -22,7 +27,7 @@ export default (state = initState, action) => {
             return newState;
         case INIT_AJAX_LIST:
             newState.todoList = action.payload;
-            return newState
+            return newState;
         default:
             return state;
     }

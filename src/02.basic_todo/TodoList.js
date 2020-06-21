@@ -12,10 +12,9 @@ class TodoList extends Component {
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleLiClick = this.handleLiClick.bind(this);
     }
-    handleButtonClick() {
-        this.getButtonClickPromise().then(() => {
-            console.log("div length: ", this.ulDom.querySelectorAll("div").length);
-        })
+    async handleButtonClick() {
+        await this.getButtonClickPromise();
+        console.log("div length: ", this.ulDom.querySelectorAll("div").length);
     }
     getButtonClickPromise() {
         return new Promise((resolve, reject) => {
